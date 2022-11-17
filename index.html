@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TIPOGRAFIA POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- LIBRERIAS -->
+    
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <!-- MIS ESTILOS -->
+    <link rel="stylesheet" href="/mi_repositorio/css/style.css"/>
+
+    <title>Millennium | Fitness Center</title>
+</head>
+
+<body>
+    <div id="grid-container"> 
+
+        <header class="header">             
+            
+            <nav class="navbar bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand text-light" href="index.html">Millennium | FC</a>
+                </div>
+            </nav>
+            
+        </header>
+        
+        <main class="container-fluid mg-0 p-0">
+            <!-- SECCIÓN INTRODUCCIÓN -->
+            <section class="introduccion">
+                <div class="intro-texto">
+                    <h1 class="">Millennuim Fitness Center</h1>
+                    <p>Una nueva forma de entrenar</p>
+                </div>
+            </section>
+    
+            
+            <section class="bg-light m-2 p-4">
+                <h2 class="text-center p-4">Clases y horarios</h2>
+    
+                <table class="table mb-4 p-2">
+                    <thead class="table-info">
+                        <tr>
+                            <th scope="col">Horarios</th>
+                            <th scope="col">Lunes</th>
+                            <th scope="col">Martes</th>
+                            <th scope="col">Miécoles</th>
+                            <th scope="col">Jueves</th>
+                            <th scope="col">Viernes</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <th scope="row">9:00</th>
+                            <td>Full Body</td>
+                            <td>Funcional</td>
+                            <td>Full Body</td>
+                            <td>Zumba</td>
+                            <td>Full Body</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10:00</th>
+                            <td>TRX</td>
+                            <td>Streching</td>
+                            <td>Funcional</td>
+                            <td>Streching</td>
+                            <td>TRX</td>
+                        </tr>
+        
+                        <tr>
+                            <th scope="row">11:00</th>
+                            <td>Full Body</td>
+                            <td>Zumba</td>
+                            <td>Full Body</td>
+                            <td>Zumba</td>
+                            <td>Full Body</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12:00</th>
+                            <td>Full Body</td>
+                            <td>Areobox</td>
+                            <td>Funcional</td>
+                            <td>Areobox</td>
+                            <td>Full Body</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table-secondary"></th>
+                            <td class="table-secondary"></td>
+                            <td class="table-secondary"></td>
+                            <td class="table-secondary"></td>
+                            <td class="table-secondary"></td>
+                            <td class="table-secondary"></td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">16:00</th>
+                            <td>Areobox</td>
+                            <td>GAP</td>
+                            <td>Funcional</td>
+                            <td>Areobox</td>
+                            <td>GAP</td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row" class="table-secondary"></th>
+                            <td class="table-secondary"></td>
+                            <td class="table-secondary"></td>
+                            <td class="table-secondary"></td>
+                            <td class="table-secondary"></td>
+                            <td class="table-secondary"></td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">19:00</th>
+                            <td>Areobox</td>
+                            <td>GAP</td>
+                            <td>Funcional</td>
+                            <td>Areobox</td>
+                            <td>GAP</td>
+                        </tr>
+        
+                        <tr>
+                            <th scope="row">20:00</th>
+                            <td>Zumba</td>
+                            <td>TRX</td>
+                            <td>Funcional</td>
+                            <td>TRX</td>
+                            <td>Zumba</td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">21:00</th>
+                            <td>Funcional</td>
+                            <td>Areobox</td>
+                            <td>Funcional</td>
+                            <td>Areobox</td>
+                            <td>Funcional</td>
+                        </tr>           
+                    </tbody>
+                </table>
+    
+            </section>
+    
+            <section>
+                <h2 class="text-center p-4">Reservas de turnos</h2>
+    
+                <form action="" id="reserva">
+                    <!-- <input type="date" id="fecha" autocomplete="off"/> -->
+                    <input type="text" id="nombre" placeholder="Nombre" autocomplete="off"/>
+                    <input type="text" id="apellido" placeholder="Apellido" autocomplete="off"/>
+    
+                    <select name="Clases" id="selectClase">
+                        <option value="0">Seleccionar Clase</option>
+                        <option value="Funcional">Funcional</option>
+                        <option value="Full Body">Full Body</option>
+                        <option value="TRX">TRX</option>
+                        <option value="GAP">GAP</option>
+                        <option value="Streching">Streching</option>
+                        <option value="Areobox">Aerobox</option>
+                    </select>
+            
+                    <button type="submit">Reservar</button>
+                </form>
+        
+                <table id="claseReservadas" style="margin-top: 1rem;">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Clase</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody id="tbodyClasesReservadas">
+                
+                    </tbody>
+                </table> 
+    
+            </section>
+    
+        </main>
+        
+        
+        <footer class="container-fluid py-3 my-4 bg-dark ">
+            <p class="text-center text-muted">&copy; 2022 Millennium|FC, Inc</p>
+        </footer>
+        
+    </div>
+
+    <!-- LIBRERIAS -->
+
+    <!-- Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
+
+    <!-- Mis scripts-->
+    <script src="/mi_repositorio/js/main.js"></script>
+</body>
+
+</html>

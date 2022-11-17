@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color:#E3E3E3; 
+}
+
+.introduccion {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    background-image: url(../img/weights-exercise-weightlifter-strong-athletic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.intro-texto {
+    width: -webkit-fill-available;
+    font-weight:bolder;
+    border-radius: 5px;
+    border-style:hidden;
+    border-color: rgba(12, 221, 236);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color:rgba(12, 221, 236, 0.858);
+    padding: 10px 0;
+
+}
+
+#claseReservadas thead tr th, 
+#claseReservadas tbody tr td {
+    margin: 20px 20px 20px 0;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: rgb(239, 240, 240);
+}
