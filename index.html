@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <div id="grid-container"> 
+    <div id="container-fluid"> 
 
         <header class="header">             
             
@@ -40,146 +40,63 @@
             <!-- SECCIÓN INTRODUCCIÓN -->
             <section class="introduccion">
                 <div class="intro-texto">
-                    <h1 class="">Millennuim Fitness Center</h1>
+                    <h1 class="">Millennium Fitness Center</h1>
                     <p>Una nueva forma de entrenar</p>
                 </div>
             </section>
     
-            
-            <section class="bg-light m-2 p-4">
-                <h2 class="text-center p-4">Clases y horarios</h2>
-    
-                <table class="table mb-4 p-2">
-                    <thead class="table-info">
-                        <tr>
-                            <th scope="col">Horarios</th>
-                            <th scope="col">Lunes</th>
-                            <th scope="col">Martes</th>
-                            <th scope="col">Miécoles</th>
-                            <th scope="col">Jueves</th>
-                            <th scope="col">Viernes</th>
-                        </tr>
-                    </thead>
-    
-                    <tbody>
-                        <tr>
-                            <th scope="row">9:00</th>
-                            <td>Full Body</td>
-                            <td>Funcional</td>
-                            <td>Full Body</td>
-                            <td>Zumba</td>
-                            <td>Full Body</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">10:00</th>
-                            <td>TRX</td>
-                            <td>Streching</td>
-                            <td>Funcional</td>
-                            <td>Streching</td>
-                            <td>TRX</td>
-                        </tr>
-        
-                        <tr>
-                            <th scope="row">11:00</th>
-                            <td>Full Body</td>
-                            <td>Zumba</td>
-                            <td>Full Body</td>
-                            <td>Zumba</td>
-                            <td>Full Body</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">12:00</th>
-                            <td>Full Body</td>
-                            <td>Areobox</td>
-                            <td>Funcional</td>
-                            <td>Areobox</td>
-                            <td>Full Body</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="table-secondary"></th>
-                            <td class="table-secondary"></td>
-                            <td class="table-secondary"></td>
-                            <td class="table-secondary"></td>
-                            <td class="table-secondary"></td>
-                            <td class="table-secondary"></td>
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">16:00</th>
-                            <td>Areobox</td>
-                            <td>GAP</td>
-                            <td>Funcional</td>
-                            <td>Areobox</td>
-                            <td>GAP</td>
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row" class="table-secondary"></th>
-                            <td class="table-secondary"></td>
-                            <td class="table-secondary"></td>
-                            <td class="table-secondary"></td>
-                            <td class="table-secondary"></td>
-                            <td class="table-secondary"></td>
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">19:00</th>
-                            <td>Areobox</td>
-                            <td>GAP</td>
-                            <td>Funcional</td>
-                            <td>Areobox</td>
-                            <td>GAP</td>
-                        </tr>
-        
-                        <tr>
-                            <th scope="row">20:00</th>
-                            <td>Zumba</td>
-                            <td>TRX</td>
-                            <td>Funcional</td>
-                            <td>TRX</td>
-                            <td>Zumba</td>
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">21:00</th>
-                            <td>Funcional</td>
-                            <td>Areobox</td>
-                            <td>Funcional</td>
-                            <td>Areobox</td>
-                            <td>Funcional</td>
-                        </tr>           
-                    </tbody>
-                </table>
-    
-            </section>
-    
-            <section>
+            <!-- Sección cliente -->
+            <!-- <section class="col-fluid d-flex justify-content-center col-fluid my-2">
+                
+                <form class="row col-4 justify-content-md-center m-4  bg-light p-4 " id="formularioLogin">   
+                    <h5 class="text-center my-2">Ingresa tus datos</h5>                
+                    <div class="mb-3">
+                      <label for="inputNombreYapellido" class="form-label">Nombre y Apellido </label>
+                      <input type="text" class="form-control" id="inputNombreYapellido" aria-describedby="Nombre y Apellido">
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputClave" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="inputClave">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </section> -->
+
+            <!-- Formulario reserva -->
+            <section class="col-fluid d-flex justify-content-center col-fluid p-4 formularioReserva">
                 <h2 class="text-center p-4">Reservas de turnos</h2>
     
                 <form action="" id="reserva">
-                    <!-- <input type="date" id="fecha" autocomplete="off"/> -->
-                    <input type="text" id="nombre" placeholder="Nombre" autocomplete="off"/>
-                    <input type="text" id="apellido" placeholder="Apellido" autocomplete="off"/>
-    
-                    <select name="Clases" id="selectClase">
-                        <option value="0">Seleccionar Clase</option>
-                        <option value="Funcional">Funcional</option>
-                        <option value="Full Body">Full Body</option>
-                        <option value="TRX">TRX</option>
-                        <option value="GAP">GAP</option>
-                        <option value="Streching">Streching</option>
-                        <option value="Areobox">Aerobox</option>
-                    </select>
-            
-                    <button type="submit">Reservar</button>
+
+                    <div id="datosCliente">
+
+                    </div>
+                    <!-- Input fecha creado de forma dinamica -->
+                    <!-- Input Nombre y Apellido creado de forma dinamica -->
+                    <!-- Input idCliente creado de forma dinamica -->
+                    <div id="datosReserva">
+                        <select name="Clases" id="selectClase">
+                            <option value="0">Seleccionar Clase</option>
+                            <option value="Funcional - 8:00">Funcional - 8:00</option>
+                            <option value="Funcional - 10:00">Funcional - 10:00</option>
+                            <option value="Full Body - 11:00">Full Body - 11:00</option>
+                            <option value="TRX - 14:00 ">TRX - 14:00</option>
+                            <option value="GAP - 16:00">GAP - 16:00</option>
+                            <option value="Streching 18:00">Streching - 18:00</option>
+                            <option value="Areobox - 20:00">Aerobox - 20:00</option>
+                            <option value="Funcional - 22:00">Funcional - 22:00</option>
+                        </select>
+                    </div>
+                                           
+                    <button type="submit" id="btnReserva">Reservar</button>
+                    
                 </form>
         
-                <table id="claseReservadas" style="margin-top: 1rem;">
+                <table id="claseReservadas" class="m-4" style="margin-top: 1rem;">
                     <thead>
                         <tr>
                             <th>Fecha</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Nombre y Apellido</th>
                             <th>Clase</th>
                         </tr>
                     </thead>
@@ -194,8 +111,8 @@
         </main>
         
         
-        <footer class="container-fluid py-3 my-4 bg-dark ">
-            <p class="text-center text-muted">&copy; 2022 Millennium|FC, Inc</p>
+        <footer class="container-fluid py-3 bg-dark ">
+            <p class="text-center text-muted">&copy; 2022 Millennium | FC, Inc</p>
         </footer>
         
     </div>
