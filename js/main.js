@@ -161,9 +161,9 @@ function fechaSeaMayorAhoy(fecha){
     const dateHoy = new Date();
     const dateReserva = new Date(fecha);
     
-    const anioFechaReservada = dateReserva.getFullYear();
-    const mesFechaReservada = dateReserva.getMonth();
-    const diaRechaReservada = dateReserva.getDate();
+    //const anioFechaReservada = dateReserva.getFullYear();
+    //const mesFechaReservada = dateReserva.getMonth();
+    //const diaRechaReservada = dateReserva.getDate();
 
     //Validar si la fecha elegida es menor a hoy
     if(dateReserva < dateHoy){
@@ -197,6 +197,7 @@ function agregarElementosAlFormulario (){
 }
 
 function mensajeReserva () {
+    let btnReserva = document.querySelector('#btnReserva');
     
     btnReserva.addEventListener('click', () => {
 
@@ -209,29 +210,69 @@ function mensajeReserva () {
     })
 }
 
+//let personasStarwarsList ;
+//let existeCliente = "";
+
+
+/* 
 async function obtenerPersonasStarwars (){
     const response =await fetch ('https://swapi.dev/api/people')
     const personasStarwars  = await response.json()
-
-    console.log(personasStarwars)
-
-    const personasStarwarsList = personasStarwars.results
     
-    for (const persona of personasStarwarsList){
+    personasStarwarsList = personasStarwars.results
+    console.log(personasStarwars.results)
+    
+
+   for (const persona of personasStarwarsList){
         const nombreClienteRegistrado = persona.name
         const anioDeNacimientoCliente = persona.birth_year
+        console.log(nombreClienteRegistrado,anioDeNacimientoCliente) 
     }
-
-   
-
-   
+    //console.log(listaClientesRegistrados)
+    //return nombreClienteRegistrado
 }
+obtenerPersonasStarwars() */
 
-obtenerPersonasStarwars()
 
-/* function existeCliente (nombreYapellido, idCliente) {
 
-} */
+
+//nota: hay que comparar los inputs de nombre y id con los datos de la API, ver como hacerlo
+function existeCliente (nombreYapellido, idCliente) {
+
+    fetch('/mi_repositorio/json/clientes.json')
+    .then( (response) => {
+    
+        return response.json();
+    
+    }).then( (clientes) => {
+
+        let clienteEncontrado = true;
+
+        for (let i=0; i < clientes.length; i++){
+            
+            if((clientes[i].nombreYapellido !== nombreYapellido)&&(clientes[i].idCliente !== idCliente)){
+                clienteEncontrado=false;
+
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Oops...',
+                    text: 'Cliente no existe!'
+                })
+
+                console.log("Cliente no existe")
+                //return true;
+                break;
+                
+                
+
+            }
+        }
+        return clienteEncontrado;
+    });
+
+    
+
+}
 
 /* VARIABLES GLOBALES */
 //localStorage.clear();
@@ -239,7 +280,7 @@ obtenerPersonasStarwars()
 const formularioReservas = document.getElementById("reserva");
 const datosCliente = document.getElementById("datosCliente");
 const datosReserva = document.getElementById("datosReserva");
-let btnReserva = document.getElementById("btnReserva");
+
 
 
 let inputFecha;
@@ -258,9 +299,9 @@ let selectClase = document.getElementById("selectClase");
 
 let valor;
 
-const listaClientesRegistrados = [];
+//const listaClientes = [];
 
-
+//console.log(listaClientes)
 //console.log(selectClase);
 
 
@@ -277,18 +318,17 @@ formularioReservas.addEventListener("submit", (event)=>{
     //Obtenemos los datos
     const fecha = inputFecha.value;
     const nombreYapellido = inputNombreYapellido.value;
-    const idCliente = inputIdCliente.value;
-
-    //Comprobamos que el cliente esta registrado
-    //existeCliente();
+    const idCliente = parseInt(inputIdCliente.value);
+    
+    //Comprobar si existe el cliente
+    existeCliente(nombreYapellido, idCliente);
 
     //Obtenemos la clase seleccionada   
     selectClase.addEventListener("change", (event)=>{
         valor = event.target.value;
         return valor;
     }); 
-    
-   
+
     //Chequeamos que la fecha no este reservada y que la fehca sea distinta de hoy
     if(fechaDisponible(fecha)) {
 
@@ -313,7 +353,7 @@ formularioReservas.addEventListener("submit", (event)=>{
             inputFecha.value="";
             inputNombreYapellido.value="";
             inputIdCliente.value="";
-        
+    
             //Renderizar tabla
             renderizarTabla();
 
@@ -326,7 +366,7 @@ formularioReservas.addEventListener("submit", (event)=>{
             })
 
         }
-        
+    
 
     }else {
 

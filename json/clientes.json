@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "nombreYapellido": "Andrea Paz",
+        "idCliente": 123456
+
+    },
+    {
+        "id": 2,
+        "nombreYapellido": "Juan Suarez",
+        "idCliente": 123456
+    },
+    {
+        "id": 3,
+        "nombreYapellido": "Pablo Perez",
+        "idCliente": 123456
+    },
+    {
+        "id": 4,
+        "nombreYapellido": "Daniela Sosa",
+        "idCliente": 123456        
+    },
+    {
+        "id": 5,
+        "nombreYapellido": "Ana Gomez",
+        "idCliente": 123456
+    },
+    {
+        "id": 5,
+        "nombreYapellido": "Sol Aguirre",
+        "idCliente": 123456
+    }
+
+]

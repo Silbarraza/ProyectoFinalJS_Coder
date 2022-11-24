@@ -40,7 +40,7 @@ body {
 }
  */
 .formularioReserva {
-    height:30rem;
+    height:auto;
     display: flex;
     flex-flow: wrap;
     flex-direction: column;
